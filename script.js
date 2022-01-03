@@ -1,6 +1,6 @@
 let weather  = {
     'apiKey': '8cf1a897d9da6aa0a705c0605e394b86',
-    fetchWeather: function(city){
+    fetchWeather: function (city) {
         fetch(
             'api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=' + this.apiKey
         ).then((response) => {
@@ -22,7 +22,7 @@ let weather  = {
         document.querySelector('.icon').src = ' https://openweathermap.org/img/wn/' + icon + '.png'
         document.querySelector('.description').innerText = description
         document.querySelector('.temp').innerText = temp + '° C'
-        document.querySelector('.humidity').innerText = humidity + '%'
+        document.querySelector('.humidity').innerText = 'Humidity: ' + humidity + '%'
         document.querySelector('.wind').innerText = 'Wind Speed: ' + speed + 'km/h'
 
         document.querySelector('.weather').classList.remove('loading')
@@ -36,11 +36,11 @@ let weather  = {
 
 // https://api.openweathermap.org/data/2.5/weather?q=Denver&units=metric&appid=8cf1a897d9da6aa0a705c0605e394b86
 
-document.querySelector('.search button').addEventListener('click', function() {
+document.querySelector('.search button').addEventListener('click', function () {
     weather.search()
 })
 
-document.querySelector('.search-bar').addEventListener('keyup', function(event) {
+document.querySelector('.search-bar').addEventListener('keyup', function (event) {
     if (event.key == 'Enter') {
         weather.search()
     }
