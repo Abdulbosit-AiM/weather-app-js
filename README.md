@@ -1,1 +1,1 @@
-# Weather application using JS with OpenWeather API 
+# Simple Weather App 
