@@ -46,4 +46,4 @@ document.querySelector('.search-bar').addEventListener('keyup', function (event)
     }
 })
 
-weather.fetchWeather('Denver')
+weather.fetchWeather('Kokand')
