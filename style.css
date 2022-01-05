@@ -83,3 +83,11 @@ h1.temp {
     top: 0%;
     left: 20px;
 }
+
+/* attrubute to title icon */
+.attribute {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    visibility: hidden;
+}
